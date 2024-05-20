@@ -1,11 +1,11 @@
 const Info = ({user}) => {
   const {name, surname, favPkmn} = user;
   return (
-    <>
-        <h3 className="text-3xl font-bold underline">Nombre: {name}</h3>
-        <h3 className="text-3xl font-bold underline">Apellido: {surname}</h3>
-        <h3 className="text-3xl font-bold underline">Pokemon favorito: {favPkmn}</h3>
-    </>
+    <div className="w-1/5	flex flex-col">
+      <h3>Nombre: {name}</h3>
+      <h3>Apellido: {surname}</h3>
+      <h3>Pokemon favorito: {favPkmn}</h3>
+    </div>
   )
 }
 

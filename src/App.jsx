@@ -2,10 +2,9 @@ import Form from "./components/Form";
 
 function App() {
   return (
-    <>
-      <h1>React Form</h1>
+    <div className="flex flex-col justify-center h-screen w-screen items-center font-mono bg-black">
       <Form/>
-    </>
+    </div>
   )
 }
 
