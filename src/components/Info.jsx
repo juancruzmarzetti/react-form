@@ -1,10 +1,10 @@
 const Info = ({user}) => {
-  const {name, surname, favPkmn} = user;
+  const {name, age, favPkmn} = user;
   return (
-    <div className="w-1/5	flex flex-col">
-      <h3>Nombre: {name}</h3>
-      <h3>Apellido: {surname}</h3>
-      <h3>Pokemon favorito: {favPkmn}</h3>
+    <div className="w-1/5	flex flex-col text-white mt-16">
+      <h3>Name: {name}</h3>
+      <h3>Age: {age}</h3>
+      <h3>Favourite pokemon: {favPkmn}</h3>
     </div>
   )
 }

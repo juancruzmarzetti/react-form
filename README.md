@@ -1,8 +1,10 @@
-# React + Vite
+# Consigna:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Crear un formulario de registro de usuario, con los campos:
 
-Currently, two official plugins are available:
+- Nombre completo.
+- Edad.
+- Pokemon favorito.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Y luego el campo Registro, con una funcionalidad que vimos en clase.
+¡Buena suerte!

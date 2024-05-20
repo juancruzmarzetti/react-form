@@ -3,15 +3,15 @@ import Info from "./Info";
 
 const Form = () => {
 
-    const [user, setUser] = useState({name: "", surname: "", favPkmn: ""})
+    const [user, setUser] = useState({name: "", age, favPkmn: ""})
     const [show, setShow] = useState(false);
     const [error, setError] = useState(false);
 
     function handleName(e){
         setUser({...user, name: e.target.value});    
     }
-    function handleSurname(e){
-        setUser({...user, surname: e.target.value});    
+    function handleAge(e){
+        setUser({...user, age: e.target.value});    
     }
     function handlePokemon(e){
         setUser({...user, favPkmn: e.target.value});    
@@ -20,7 +20,7 @@ const Form = () => {
         e.preventDefault();
         if(
             user.name.trim().length > 3 &&
-            user.surname.trim().length > 5 &&
+            user.age > 0 &&
             user.favPkmn.trim()
           ){
             setShow(true);
@@ -41,8 +41,8 @@ const Form = () => {
                 <input onChange={handleName} value={user.name} type='text' id='name' name='surname' className="w-3/6 rounded-md"/>
             </div>
             <div className="m-3 w-2/3 flex">
-                <label className="w-3/6 text-white">Surname:</label>
-                <input onChange={handleSurname} value={user.surname} type='text' id='surname' name='surname' className="w-3/6 rounded-md"/>
+                <label className="w-3/6 text-white">Age:</label>
+                <input onChange={handleAge} value={user.age} type='number' id='age' name='age' className="w-3/6 rounded-md"/>
             </div>
             <div className="m-3 mb-5 w-2/3 flex">
                 <label className="w-3/6 text-white">Favourite pokemon:</label>
