@@ -1,13 +1,14 @@
 import { useState } from "react";
 import Info from "./Info";
 
-const Form = () => {
+const Form = ({testHandleChangeName, testHandleOnClick}) => {
 
     const [user, setUser] = useState({name: "", age: "", favPkmn: ""})
     const [show, setShow] = useState(false);
     const [error, setError] = useState(false);
 
     function handleName(e){
+        testHandleChangeName(e.target.value);
         setUser({...user, name: e.target.value});    
     }
     function handleAge(e){
@@ -38,7 +39,7 @@ const Form = () => {
         <form onSubmit={handleSubmit} className="w-2/5	flex flex-col bg-blue-950 rounded-md justify-center items-center shadow-xl shadow-white">
             <div className="m-3 mt-10 w-2/3 flex">
                 <label className="w-3/6 text-white">Name:</label>
-                <input onChange={handleName} value={user.name} type='text' id='name' name='surname' className="w-3/6 rounded-md"/>
+                <input onChange={handleName} data-testid="input-test-text" value={user.name} type='text' id='name' name='surname' className="w-3/6 rounded-md"/>
             </div>
             <div className="m-3 w-2/3 flex">
                 <label className="w-3/6 text-white">Age:</label>
@@ -48,7 +49,7 @@ const Form = () => {
                 <label className="w-3/6 text-white">Favourite pokemon:</label>
                 <input onChange={handlePokemon} value={user.favPkmn} type='text' id='fav-pokemon' name='fav-pokemon' className="w-3/6 rounded-md"/>
             </div>
-            <button type='submit' className="w-3/6 mb-10 mt-5 bg-black text-white px-2.5 py-1 w-20">Send</button>
+            <button type='submit' data-testid="button-submit-onclick-test" onClick={testHandleOnClick} className="w-3/6 mb-10 mt-5 bg-black text-white px-2.5 py-1 w-20">Send</button>
         </form>
         {show && <Info user={user}/>}
         {error && (
