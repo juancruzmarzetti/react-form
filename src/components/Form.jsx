@@ -3,7 +3,7 @@ import Info from "./Info";
 
 const Form = () => {
 
-    const [user, setUser] = useState({name: "", age, favPkmn: ""})
+    const [user, setUser] = useState({name: "", age: "", favPkmn: ""})
     const [show, setShow] = useState(false);
     const [error, setError] = useState(false);
 
